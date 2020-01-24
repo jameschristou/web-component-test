@@ -1,0 +1,20 @@
+{
+  "description": "Playing around with web components",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameschristou/web-component-test"
+  },
+  "keywords": [
+    "web component"
+  ],
+  "author": "James Christou",
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
+  }
+}
