@@ -3,8 +3,31 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="index.js"></script>
+        <style>
+            editable-textfield{
+                background-color: lightsalmon;
+            }
+
+            .editableTextfield{
+                padding: 10px;
+                border: 1px solid lightgray;
+                border-radius: 3px;
+            }
+
+            .editableTextfield:hover{
+                background-color: lightgray;
+            }
+
+            .editableTextfield:focus{
+                background-color: lightgray;
+            }
+
+            .hidden{
+                display:none;
+            }
+        </style>
     </head>
     <body>
-        <hello-world><p>Will this work inside?</p></hello-world>
+        <editable-textfield>Content from element nested inside my component element</editable-textfield>
     </body>
 </html>
