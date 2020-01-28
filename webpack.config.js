@@ -1,18 +1,18 @@
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
-  output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
-  plugins: [
-    new MiniCssExtractPlugin({ filename: 'style.css' })
-  ],
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
+      },
       {
         test: /\.s?css$/,
         use: [
@@ -23,15 +23,37 @@ module.exports = {
               hmr: true,
               // if hmr does not work, this is a forceful method.
               reloadAll: true,
-            }
+            },
           },
           'css-loader',
           'sass-loader'
         ],
-      },
+      }
     ]
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
+  output: {
+    path: path.resolve(__dirname, '../', 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    })
+  ],
   devServer: {
-    contentBase: './src'
-  }
+    contentBase: './src',
+    hot: true
+  },
+  mode: 'development',
+  devtool: 'eval-source-map'
 };
