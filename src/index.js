@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import EditableTextfield from './EditableTextfield/EditableTextfield';
+import ShadowDomCard from './ShadowDomCard/ShadowDomCard';
 
 // bootstrap the react application but only after document load (we need the container element to exist)
 window.onload = function (){
@@ -14,6 +15,7 @@ const AppComponent = (props) => {
   return (
     <div>
       <editable-textfield text={textVal}></editable-textfield>
+      <shadow-card></shadow-card>
     </div>
   );
 }
