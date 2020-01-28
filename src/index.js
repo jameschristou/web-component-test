@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import EditableTextfield from './EditableTextfield/EditableTextfield';
 import ShadowDomCard from './ShadowDomCard/ShadowDomCard';
+import './style.scss';
 
 // bootstrap the react application but only after document load (we need the container element to exist)
 window.onload = function (){
