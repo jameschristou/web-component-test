@@ -1,3 +1,5 @@
+import './style.scss';
+
 class EditableTextfield extends HTMLElement {
   static get observedAttributes() {
     return ['disabled', 'text'];
@@ -77,3 +79,5 @@ class EditableTextfield extends HTMLElement {
 }
 
 customElements.define('editable-textfield', EditableTextfield);
+
+export default EditableTextfield;

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import EditableTextfield from './EditableTextfield/EditableTextfield';
 
 // bootstrap the react application but only after document load (we need the container element to exist)
 window.onload = function (){

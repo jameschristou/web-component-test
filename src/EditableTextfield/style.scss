@@ -1,0 +1,21 @@
+editable-textfield{
+    background-color: lightsalmon;
+}
+
+.editableTextfield{
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+
+    :hover{
+        background-color: lightgray;
+    }
+
+    :focus{
+        background-color: lightgray;
+    }
+}
+
+.hidden{
+    display:none;
+}
