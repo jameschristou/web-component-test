@@ -17,7 +17,7 @@ module.exports = {
         test: /\.s?css$/,
         oneOf:[
           {
-            issuer: /ShadowDom/,
+            issuer: /ShadowDomComponents/,
             use:[
               'raw-loader', // used for importing scss files as a string for use in constructible stylesheets
               'sass-loader'
