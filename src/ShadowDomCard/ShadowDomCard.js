@@ -20,7 +20,7 @@ class ShadowDomCard extends HTMLElement {
           <div class="video-count"></div>
         </div>
         <div class="heading">Volkswagen Touareg 2020 Long-term Test</div>
-        <div class="summary">This is some summary text</div>
+        <div class="summary">This is some summary text with themed background colour</div>
       </div>
     `;
 

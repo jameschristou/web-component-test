@@ -9,7 +9,7 @@
     
 }
 
-::slotted(.gallery-image){
+::slotted(*){
     width:100%;
 }
 
@@ -19,6 +19,6 @@
 
 .summary{
     font-size: 12px;
-    padding: 5px 10px 10px 10px;
+    padding: 10px;
     background-color: var(--theme-button-colour);
 }

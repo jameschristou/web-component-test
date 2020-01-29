@@ -16,9 +16,14 @@ const AppComponent = (props) => {
   return (
     <div>
       <editable-textfield text={textVal}></editable-textfield>
-      <shadow-card>
-        <img className="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/191117_vw_touareg_sc_04.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
-      </shadow-card>
+      <div className="card-container">
+        <shadow-card>
+          <img className="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/191117_vw_touareg_sc_04.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
+        </shadow-card>
+        <shadow-card>
+          <img className="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/191117_vw_touareg_sc_04.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
+        </shadow-card>
+      </div>
     </div>
   );
 }
