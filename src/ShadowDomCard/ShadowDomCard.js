@@ -1,29 +1,16 @@
+import styleText from './style.scss';
+
+const componentSheet = new CSSStyleSheet();
+componentSheet.replaceSync(styleText);
+
 class ShadowDomCard extends HTMLElement {
   constructor() {
     super(); // always call super() first in the constructor.
 
     // Attach a shadow root to <fancy-tabs>.
     const shadowRoot = this.attachShadow({mode: 'open'});
+    shadowRoot.adoptedStyleSheets = [componentSheet];
     shadowRoot.innerHTML = `
-      <style>
-        :host{
-          display:block;
-          border: 1px solid lightgray;
-          border-radius: 3px;
-          max-width:400px;
-          width:100%;
-          background-color: lightgray;
-        }
-
-        .gallery-image{
-          width:100%;
-        }
-
-        .heading{
-          padding: 10px;
-        }
-        
-      </style>
       <div class="gallery">
         <img class="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/191117_vw_touareg_sc_04.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
       </div>
@@ -36,6 +23,9 @@ class ShadowDomCard extends HTMLElement {
         <div class="summary">This is some summary text</div>
       </div>
     `;
+
+    // experiment: try getting child elements defined in the light dom and injecting them where required
+    // in the shadow dom
   }
 
   // properties required

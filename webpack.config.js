@@ -15,19 +15,30 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: [
+        oneOf:[
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // only enable hot in development
-              hmr: true,
-              // if hmr does not work, this is a forceful method.
-              reloadAll: true,
-            },
+            issuer: /ShadowDomCard.js$/,
+            use:[
+              'raw-loader', // used for importing scss files as a string for use in constructible stylesheets
+              'sass-loader'
+            ]
           },
-          'css-loader',
-          'sass-loader'
-        ],
+          {
+            use: [
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  // only enable hot in development
+                  hmr: true,
+                  // if hmr does not work, this is a forceful method.
+                  reloadAll: true
+                },
+              },
+              'css-loader',
+              'sass-loader'
+            ],
+          }
+        ]
       }
     ]
   },

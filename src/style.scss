@@ -1,8 +1,17 @@
+body{
+    // theming
+    //--theme-button-colour: #29abe2;
+
+    font-family: sans-serif;
+    color: darkdarkgray;
+}
+
 shadow-card{
     width: 200px;
 
     // the following style will not work because we are using shadow dom for this custom element
     .heading{
         padding: 20px 10px;
+        background-color: red;
     }
 }
