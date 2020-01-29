@@ -12,7 +12,7 @@ class ShadowDomCard extends HTMLElement {
     shadowRoot.adoptedStyleSheets = [componentSheet];
     shadowRoot.innerHTML = `
       <div class="gallery">
-        <img class="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/191117_vw_touareg_sc_04.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
+        <slot></slot>
       </div>
       <div class="content">
         <div class="">

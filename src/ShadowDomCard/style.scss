@@ -9,10 +9,16 @@
     
 }
 
-.gallery-image{
+::slotted(.gallery-image){
     width:100%;
 }
 
 .heading{
     padding: 10px;
+}
+
+.summary{
+    font-size: 12px;
+    padding: 5px 10px 10px 10px;
+    background-color: var(--theme-button-colour);
 }

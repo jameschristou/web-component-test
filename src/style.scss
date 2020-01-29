@@ -1,6 +1,6 @@
 body{
-    // theming
-    //--theme-button-colour: #29abe2;
+    // theming using css custom properties. These can be accessed by the shadow dom on a web component
+    --theme-button-colour: #29abe2;
 
     font-family: sans-serif;
     color: darkdarkgray;
