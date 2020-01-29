@@ -3,7 +3,7 @@ import styleText from './style.scss';
 const componentSheet = new CSSStyleSheet();
 componentSheet.replaceSync(styleText);
 
-class ShadowDomCard extends HTMLElement {
+class Card extends HTMLElement {
   constructor() {
     super(); // always call super() first in the constructor.
 
@@ -32,6 +32,6 @@ class ShadowDomCard extends HTMLElement {
   // imageCount, videoCount, showVideoIcon
 }
 
-customElements.define('shadow-card', ShadowDomCard);
+customElements.define('my-card', Card);
 
-export default ShadowDomCard;
+export default Card;
