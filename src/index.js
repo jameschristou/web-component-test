@@ -14,7 +14,7 @@ window.onload = function (){
 };
 
 const AppComponent = (props) => {
-  let [textVal, setTextVal] = useState('This is the text to display');
+  let [textVal, setTextVal] = useState('This editable textfield is not using shadow dom');
 
   return (
     <div>
@@ -31,7 +31,7 @@ const AppComponent = (props) => {
           <div slot="content" className="summary">This is some summary text with themed background colour</div>
         </my-card>
       </my-carousel>
-      <my-textfield class="with-border">Initial text</my-textfield>
+      <my-textfield class="with-border">This editable textfield is using shadow dom</my-textfield>
     </div>
   );
 }

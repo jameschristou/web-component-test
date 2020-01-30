@@ -75,6 +75,7 @@ class MyTextfield extends HTMLElement {
   }
 
   connectedCallback() {
+    // we need to do this here because in the constructor the slotted elements have not been assigned yet
     this._textdiv.innerText = this._textslot.assignedNodes()[0].textContent;
   }
 }

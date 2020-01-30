@@ -30,18 +30,7 @@ class EditableTextfield extends HTMLElement {
   }
 
   connectedCallback() {
-    el = document.createElement('div');
-    el.innerHTML = this.getAttribute('text');
-    el.className = "editableTextfield";
-    el.setAttribute("contenteditable", true);
-    el.onclick = () => {
-      var el = this.querySelector(".editableTextfieldActionsContainer");
-      el.className = el.className.replace("hidden", "").trim();
-      console.log('click event');
-    }
-    this.appendChild(el);
-
-    var el = document.createElement('div');
+    let el = document.createElement('div');
     el.className = "editableTextfieldActionsContainer hidden";
 
     var child = document.createElement('div');
@@ -74,7 +63,24 @@ class EditableTextfield extends HTMLElement {
     child.appendChild(btn);
 
     el.appendChild(child);
-    this.appendChild(el);
+
+    let container = document.createElement('div');
+    container.className = "editableTextfieldContainer";
+    
+    let textdiv = document.createElement('div');
+    textdiv.innerHTML = this.getAttribute('text');
+    textdiv.className = "editableTextfield";
+    textdiv.setAttribute("contenteditable", true);
+    textdiv.onclick = () => {
+      var el = this.querySelector(".editableTextfieldActionsContainer");
+      el.className = el.className.replace("hidden", "").trim();
+      console.log('click event');
+    }
+
+    container.appendChild(textdiv);
+    container.appendChild(el);
+
+    this.appendChild(container);
   }
 }
 

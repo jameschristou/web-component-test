@@ -1,21 +1,53 @@
-editable-textfield{
-    background-color: lightsalmon;
-}
+$textfield-color-hover:  lightblue;
+$action-color:  gainsboro;
+$action-color-hover: darken($action-color, 8%);
 
-.editableTextfield{
-    padding: 10px;
-    border: 1px solid lightgray;
-    border-radius: 3px;
+.editableTextfieldContainer{
+    .editableTextfield{
+        padding: 10px;
+        border-radius: 4px;
+        background-color: lighten($textfield-color-hover, 15%);
+    
+        &:hover{
+            background-color: $textfield-color-hover;
+        }
 
-    :hover{
-        background-color: lightgray;
+        &:focus{
+            background-color: $action-color;
+        }
     }
 
-    :focus{
-        background-color: lightgray;
-    }
-}
+    .editableTextfieldActionsContainer{
+        position: relative;
 
-.hidden{
-    display:none;
+        .editableTextfieldActions{
+            position:absolute;
+            right: 0px;
+            top: 4px;
+
+            .editableTextfieldAction{
+                font-weight: 700;
+                border: 1px solid $action-color-hover;
+                width: 35px;
+                height: 35px;
+                font-family: "Open Sans";
+                margin: 0 0 0 2px;
+                font-size: 12px;
+                display: inline-block;
+                background-color: $action-color;
+                border-radius: 3px;
+                fill: grey;
+
+                @media (hover: hover){
+                    &:hover{
+                        background-color: $action-color-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .hidden{
+        display:none;
+    }
 }
