@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import MyTextfield from './ShadowDomComponents/MyTextfield/MyTextfield';
 import EditableTextfield from './EditableTextfield/EditableTextfield';
 import Card from './ShadowDomComponents/Card/Card';
 import Carousel from './ShadowDomComponents/Carousel/Carousel';
@@ -30,6 +31,7 @@ const AppComponent = (props) => {
           <div slot="content" className="summary">This is some summary text with themed background colour</div>
         </my-card>
       </my-carousel>
+      <my-textfield class="with-border">Initial text</my-textfield>
     </div>
   );
 }

@@ -3,7 +3,6 @@ body{
     --theme-button-colour: #29abe2;
 
     font-family: sans-serif;
-    color: darkdarkgray;
 }
 
 .test-carousel{
@@ -20,5 +19,11 @@ my-card{
     // using this, I can override the slot styling since the summary lives in light dom
     .summary{
         font-size:13px;
+    }
+}
+
+my-textfield{
+    &.with-border{
+        width: 500px;
     }
 }

@@ -8,7 +8,6 @@ class Card extends HTMLElement {
     super(); // always call super() first in the constructor.
     this._href = "";
 
-    // Attach a shadow root to <fancy-tabs>.
     this.attachShadow({mode: 'open'});
     this.shadowRoot.adoptedStyleSheets = [componentSheet];
     this.shadowRoot.innerHTML = `

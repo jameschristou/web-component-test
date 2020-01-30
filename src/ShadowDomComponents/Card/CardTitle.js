@@ -7,7 +7,6 @@ class CardTitle extends HTMLElement {
   constructor() {
     super(); // always call super() first in the constructor.
 
-    // Attach a shadow root to <fancy-tabs>.
     const shadowRoot = this.attachShadow({mode: 'open'});
     shadowRoot.adoptedStyleSheets = [componentSheet];
     shadowRoot.innerHTML = `
