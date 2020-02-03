@@ -1,3 +1,5 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import MyTextfield from './ShadowDomComponents/MyTextfield/MyTextfield';
@@ -18,9 +20,10 @@ const AppComponent = (props) => {
 
   return (
     <div>
+      <p>TEST</p>
       <editable-textfield text={textVal}></editable-textfield>
       <my-carousel class="test-carousel">
-        <my-card href='/editorial/details/blah/'>
+        <my-card href='/editorial/details/blah/' onClick={evnt => console.log(evnt)}>
           <img slot="gallery" className="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/191117_vw_touareg_sc_04.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
           <my-card-title slot="title">This is my card title</my-card-title>
           <div slot="content" className="summary">This is some summary text with themed background colour</div>
@@ -32,6 +35,7 @@ const AppComponent = (props) => {
         </my-card>
       </my-carousel>
       <my-textfield class="with-border">This editable textfield is using shadow dom</my-textfield>
+      <p>TEST</p>
     </div>
   );
 }

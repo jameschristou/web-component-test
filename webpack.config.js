@@ -63,7 +63,8 @@ module.exports = {
   ],
   devServer: {
     contentBase: './src',
-    hot: true
+    hot: true,
+    disableHostCheck: true
   },
   mode: 'development',
   devtool: 'eval-source-map'
