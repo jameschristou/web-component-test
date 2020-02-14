@@ -7,6 +7,9 @@ $action-color-hover: darken($action-color, 8%);
         padding: 10px;
         border-radius: 4px;
         background-color: lighten($textfield-color-hover, 15%);
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
     
         &:hover{
             background-color: $textfield-color-hover;
@@ -25,7 +28,8 @@ $action-color-hover: darken($action-color, 8%);
             right: 0px;
             top: 4px;
 
-            .editableTextfieldAction{
+            .editableTextfieldAction__save,
+            .editableTextfieldAction__cancel{
                 font-weight: 700;
                 border: 1px solid $action-color-hover;
                 width: 35px;

@@ -3,7 +3,7 @@ import './style.scss';
 const template = document.createElement('template');
 template.innerHTML = `
 <div class="editableTextfieldContainer">
-  <input type="text" class="editableTextfield" value="" />
+  <input type="text" class="editableTextfield" />
   <div class="editableTextfieldActionsContainer hidden">
     <div class="editableTextfieldActions">
       <button class="editableTextfieldAction__save" tabindex="0">
@@ -29,8 +29,6 @@ class EditableTextfield extends HTMLElement {
 
     this._textinput = this._clonedNode.querySelector('.editableTextfield');
     this._actionsdiv = this._clonedNode.querySelector('.editableTextfieldActionsContainer');
-    this._saveBtn = this._clonedNode.querySelector('.editableTextfieldAction__save');
-    this._cancelBtn = this._clonedNode.querySelector('.editableTextfieldAction__cancel');
 
     this._textinput.onclick = e => {
       if(this._actionsdiv.classList.contains("hidden")){
@@ -38,11 +36,11 @@ class EditableTextfield extends HTMLElement {
       }
     };
 
-    this._saveBtn.onclick = e => {
+    this._clonedNode.querySelector('.editableTextfieldAction__save').onclick = e => {
       this.saveCurrentEdit();
     };
 
-    this._cancelBtn.onclick = e => {
+    this._clonedNode.querySelector('.editableTextfieldAction__cancel').onclick = e => {
       console.log('Cancelled text edit');
 
       if(!this._actionsdiv.classList.contains("hidden")){
