@@ -19,7 +19,7 @@ const AppComponent = (props) => {
   return (
     <div>
       <p>TEST</p>
-      <editable-textfield text={textVal}></editable-textfield>
+      <editable-textfield value={textVal}></editable-textfield>
       <my-carousel class="test-carousel">
         <my-card href='/editorial/details/blah/' onClick={evnt => console.log(evnt)}>
           <img slot="gallery" className="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/191117_vw_touareg_sc_04.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
